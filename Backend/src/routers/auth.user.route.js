@@ -64,7 +64,7 @@ router.post('/logout',async (req,res)=>
         res.status(200).send({message:"Logged out successfully"});
     } catch (error) {
         console.error("Failed to log out",error);
-        res.status(401).json({message:"Logout failed!"})
+        res.status(401).send({message:"Logout failed!"})
     }
 })
 

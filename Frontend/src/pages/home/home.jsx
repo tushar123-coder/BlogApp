@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from './Banner'
 import Blogs from '../blogs/Blogs'
+import Footer from '../../components/Footer'
 
 function home() {
   return (

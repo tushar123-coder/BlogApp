@@ -35,3 +35,23 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+/* Light theme styles */
+:root {
+  --background-color: white;
+  --text-color: black;
+}
+
+/* Dark theme styles */
+.dark {
+  --background-color: black;
+  --text-color: white;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+

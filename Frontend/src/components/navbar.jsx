@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink,Link } from 'react-router-dom'
 import { IoMenu, IoClose } from "react-icons/io5";
 import { useDispatch, useSelector } from 'react-redux';
 import avatarImg from '../../public/commentor.png'
 import { useLogoutUserMutation } from '../redux/features/auth/authApi';
 import { logout } from '../redux/features/auth/authSlice';
+
 function navbar() {
+    
+      
     const navlist = [
         { name: "Home", path: '/' },
         { name: "About us", path: '/about-us' },
@@ -32,12 +35,12 @@ function navbar() {
 
     }
     return (
-        <header className='bg-white py-6 border'>
+        <header className=' bg-blue-100 py-6 border'>
             <nav className='container mx-auto flex justify-between px-5'>
                 <a href="/">
                     <img src="/logo.png" alt="" className='h-12' />
                 </a>
-                <ul className='sm:flex hidden items-center gap-8'>
+                <ul className='sm:flex hidden items-center text-white font-bold gap-8'>
                     {
                         navlist.map((list, index) => (
                             <li key={index}>
@@ -49,6 +52,8 @@ function navbar() {
                             </li>
                         ))
                     }
+
+
                     {/* render btn based on login activity */}
                     {
                         
@@ -112,6 +117,7 @@ function navbar() {
                     </ul>
                 )
             }
+             
         </header>
     )
 }

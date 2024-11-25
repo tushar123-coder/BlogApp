@@ -10,7 +10,7 @@ function AdminNavigation() {
     const handleLogout = async ()=>{
         try {
             await LogoutUser().unwrap();
-            dispatch(logout)
+            dispatch(logout())
         } catch (error) {
             console.error("Failed to logout",error);
             
